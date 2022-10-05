@@ -1,3 +1,6 @@
 section {
   padding-left: 5px;
 }
+.ant-descriptions-item-content{
+  width:50%;
+}
