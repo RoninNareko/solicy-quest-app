@@ -1,41 +1,12 @@
+import axios from 'axios';
 import { AccountsDataType } from './../store/types/accountsTypes';
 
 class AccountsService {
-   async loadUsers ():Promise<AccountsDataType[]> {
-        return  await new Promise((resolve, reject) => {
-            setTimeout(() => {
-              resolve([{
-                id: "1",
-                name: "John Brown",
-                createdOn: "2015",
-                owner: "kek",
-              }, {
-                id: "1",
-                name: "John Brown",
-                createdOn: "2015",
-                owner: "kek",
-              },{
-                id: "1",
-                name: "John Brown",
-                createdOn: "2015",
-                owner: "kek",
-                
-              }]);
-            }, 300);
-          });
+   async loadUsers () {
+        return await axios.get<AccountsDataType[]>("/accounts");
     }
-    async findAccountByID ():Promise<AccountsDataType[]> {
-        return  await new Promise((resolve, reject) => {
-            setTimeout(() => {
-              resolve([{
-                id: "1000",
-                name: "John Brown",
-                createdOn: "2015",
-                owner: "kek",
-                updatedOn:"456456"
-              }]);
-            }, 300);
-          });
+    async findAccountByID (accountId:string | undefined) {
+      return await axios.get<AccountsDataType[]>(`/accounts/${accountId}`);
     }
 }
 

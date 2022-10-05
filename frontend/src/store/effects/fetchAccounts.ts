@@ -11,5 +11,8 @@ export const fetchAccounts = (): Effect => (dispatch, getState) => {
   
   const accountsService = new AccountsService();
   return accountsService.loadUsers()
-    .then((users) => dispatch(getAllAccountsActionCreator(users)));
+    .then((response) => {
+      const res = response.data;
+      return dispatch(getAllAccountsActionCreator(res))
+    });
 };
