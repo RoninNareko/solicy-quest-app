@@ -1,20 +1,23 @@
 module.exports = [
   {
     id: 1,
-    name: "Eldar Mainer",
-    createdOn: "2018",
-    owner: "Account_112",
+    name: "Account 1",
+    createdOn: "5-8-2021",
+    updatedOn: "5-8-2021",
+    owner: "User 1",
   },
   {
     id: 2,
-    name: "John Wick",
-    createdOn: "2011",
-    owner: "Account_203",
+    name: "Account 2",
+    createdOn: "5-8-2021",
+    updatedOn: "5-8-2021",
+    owner: "User 2",
   },
   {
     id: 3,
-    name: "Crypto Jack",
-    createdOn: "2010",
-    owner: "Account_444",
+    name: "Account 3",
+    createdOn: "5-8-2021",
+    updatedOn: "5-8-2021",
+    owner: "User 3",
   },
 ];

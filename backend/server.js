@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 4000;
+
 const accounts = require("./db/accounts");
 
 app.get("/accounts", (req, res) => {

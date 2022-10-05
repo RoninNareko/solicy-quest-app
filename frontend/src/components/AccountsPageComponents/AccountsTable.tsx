@@ -10,24 +10,24 @@ interface IProps {
 
 const columns: ColumnsType<AccountsDataType> = [
   {
-    title: "id",
+    title: "ID",
     dataIndex: "id",
     key: "id",
   },
   {
-    title: "name",
+    title: "Name",
     dataIndex: "name",
     key: "name",
   },
   {
     title: "Owner",
     dataIndex: "owner",
-    key: "created",
+    key: "owner",
   },
   {
     title: "Created On",
-    dataIndex: "created",
-    key: "created",
+    dataIndex: "createdOn",
+    key: "createdOn",
   },
   {
     title: "Action",
@@ -44,7 +44,12 @@ const columns: ColumnsType<AccountsDataType> = [
 
 const AccountsTable: React.FC<IProps> = ({ accounts }) => {
   return (
-    <Table columns={columns} showSorterTooltip={false} dataSource={accounts} />
+    <Table
+      columns={columns}
+      pagination={false}
+      showSorterTooltip={false}
+      dataSource={accounts}
+    />
   );
 };
 
