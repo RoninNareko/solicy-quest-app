@@ -4,3 +4,10 @@ section {
 .ant-descriptions-item-content{
   width:50%;
 }
+.ant-spin{
+  display: flex !important;
+  width: 100%;
+  padding: 10% !important;
+  align-items: center;
+  justify-content: center;
+}

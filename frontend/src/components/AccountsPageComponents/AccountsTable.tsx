@@ -1,7 +1,8 @@
 import React from "react";
-import { Space, Table } from "antd";
-import type { ColumnsType } from "antd/es/table";
 import { Link } from "react-router-dom";
+import { Space, Table } from "antd";
+
+import type { ColumnsType } from "antd/es/table";
 import { AccountsDataType } from "../../store/types/accountsTypes";
 
 interface IProps {

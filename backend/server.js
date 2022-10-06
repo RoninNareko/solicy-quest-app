@@ -16,10 +16,12 @@ app.get("/accounts/:id", (req, res) => {
   if (account) {
     res.header("Access-Control-Allow-Origin", "*");
     res.send(JSON.stringify([account]));
+  } else {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.status(404).send({
+      message: "Account not found",
+    });
   }
-  return res.status(404).send({
-    message: "Account not found",
-  });
 });
 
 app.listen(port, () => {

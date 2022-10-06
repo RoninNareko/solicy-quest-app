@@ -1,4 +1,4 @@
 import { getAccountByIdActionType } from '../actions/findAccountByIdActionCreator';
-import { getAllUsersActionType } from '../actions/getAllAccountsActionCreator';
+import { getAllAccountsActionType } from '../actions/getAllAccountsActionCreator';
 
-export type ActionsTypes = getAllUsersActionType | getAccountByIdActionType;
+export type ActionsTypes = getAllAccountsActionType | getAccountByIdActionType;

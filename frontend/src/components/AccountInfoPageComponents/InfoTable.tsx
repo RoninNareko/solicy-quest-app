@@ -1,5 +1,6 @@
-import { Descriptions } from "antd";
 import React from "react";
+import { Descriptions } from "antd";
+
 import { AccountsDataType } from "../../store/types/accountsTypes";
 
 interface IProps {

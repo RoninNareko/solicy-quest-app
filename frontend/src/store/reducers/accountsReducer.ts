@@ -1,6 +1,7 @@
 
 import { GET_ACCOUNTS_BY_ID } from "../actions/findAccountByIdActionCreator";
 import { GET_ALL_ACCOUNTS } from "../actions/getAllAccountsActionCreator";
+
 import { AccountsDataType } from "../types/accountsTypes";
 import { ActionsTypes } from "../types/actionTypes";
 
