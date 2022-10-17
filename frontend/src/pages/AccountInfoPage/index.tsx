@@ -9,10 +9,11 @@ import getAllUsersActionCreator from "../../store/actions/getAllAccountsActionCr
 import { fetchAccountByID } from "../../store/effects/fetchAccountByID";
 
 import { selectAccounts } from "../../store/selectors/selectAccounts";
+import { AppDispatch } from "../../store";
 
 export default function AccountsPage() {
   const accounts = useSelector(selectAccounts);
-  const dispatch = useDispatch<any>();
+  const dispatch = useDispatch<AppDispatch>();
 
   let { id } = useParams();
 

@@ -1,19 +1,21 @@
-import { applyMiddleware, createStore } from 'redux'
-import { composeWithDevTools } from "redux-devtools-extension";
-
-import thunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
 
 import reducer from "./reducers/rootReducer";
 
 const preloadedState = {};
 
-const store = createStore(reducer, preloadedState, 
-    composeWithDevTools(applyMiddleware(thunk)));
+export const store = configureStore({
+  reducer,
+  preloadedState,
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat()
+})
 
-export type RootState = ReturnType<typeof store.getState>;
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>
 
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch;
+export type AppDispatch = typeof store.dispatch
 
 store.subscribe(() => console.info(store.getState()));
 

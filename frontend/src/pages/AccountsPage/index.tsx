@@ -6,10 +6,11 @@ import AccountsTable from "../../components/AccountsPageComponents/AccountsTable
 import findAccountByIdActionCreator from "../../store/actions/findAccountByIdActionCreator";
 import { fetchAccounts } from "../../store/effects/fetchAccounts";
 import { selectAccounts } from "../../store/selectors/selectAccounts";
+import { AppDispatch } from "../../store";
 
 export default function AccountsPage() {
   const accounts = useSelector(selectAccounts);
-  const dispatch = useDispatch<any>();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(fetchAccounts());
